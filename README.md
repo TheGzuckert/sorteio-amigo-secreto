@@ -1,5 +1,6 @@
 ## Bem vindo ao Desafio do Amigo Secreto
-Primeiramente muito obrigado se você esta lendo isso
+Primeiramente muito obrigado se você esta chegou até aqui
+
 Esse projeto foi desenvolvido para o desafio do amigo secreto da empresa Log Smart
 
 ### Observações
