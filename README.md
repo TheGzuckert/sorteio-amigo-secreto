@@ -6,8 +6,6 @@ Esse projeto foi desenvolvido para o desafio do amigo secreto da empresa Log Sma
 ### Observações
   - Acabei optando por ultilizar um banco sqlite pois assim ficaria mais simples ao clonar o projeto, e como estamos ultilizando docker, uni o útil ao agradável
 
-  - O projeto foi desenvolvido com o intuito de ser simples e objetivo, por isso ultilzie o bootstrap que já vem com o laravel
-
 ### Requisitos:
 - PHP >= 8.0
 - Composer
