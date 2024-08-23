@@ -15,7 +15,8 @@ Esse projeto foi desenvolvido para o desafio do amigo secreto da empresa Log Sma
 ## Configurando Ambiente
 
 ### Variaveis de ambiente
-- Renomeie o arquivo .env.example para .env ou crie um novo arquivo .env e copie o conteúdo do .env.example
+- Renomeie o arquivo .env.example para .env
+- Ou crie um novo arquivo .env e copie o conteúdo do .env.example
 
 ### Executando composer para instalar as dependências do Laravel:
 ```bash
