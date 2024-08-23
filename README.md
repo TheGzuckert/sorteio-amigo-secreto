@@ -8,8 +8,8 @@ Esse projeto foi desenvolvido para o desafio do amigo secreto da empresa Log Sma
 
 ### Requisitos:
 - PHP >= 8.0
-- Composer
-- Laravel 8
+- Composer >= 2.7
+- Laravel >= 10
 - Dokcer
 
 ## Configurando Ambiente
