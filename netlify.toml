@@ -4,3 +4,8 @@ PHP_VERSION = "8.1"
 [build]
   command = "npx mix"
   publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

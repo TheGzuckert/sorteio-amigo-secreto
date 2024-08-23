@@ -1,3 +1,52 @@
+## Bem vindo ao Desafio do Amigo Secreto
+Primeiramente muito obrigado se você esta lendo isso
+
+O projeto foi desenvolvido na versão 9 do Laravel
+
+Não tenho muita familiaridade com a linguagem mas estou aprendendo e  me divertindo muito com o processo
+
+Bom chega é isso de enrolação e vamos lá!!!
+
+### Requisitos:
+- PHP >= 8.0
+- Composer
+- Laravel 8
+
+## Configurando Ambiente
+
+### Variaveis de ambiente
+- Renomeie o arquivo .env.example para .env ou crie um novo arquivo .env e copie o conteúdo do .env.example
+
+### Executando composer para instalar as dependências do Laravel:
+```bash
+composer install
+```
+
+### Rodando as migratoins para criar as tabelas do banco de dados
+```bash
+php artisan migrate
+```
+
+## Rodando projeto
+
+### Para rodar o projeto execute o comando:
+```bash
+php artisan serve
+```
+
+### Observações
+  - Acabei optando por ultilizar um banco sqlite pois assim ficaria mais simples ao clonar o projeto
+  - O projeto foi desenvolvido com o intuito de ser simples e objetivo, por isso ultilzie o bootstrap que já vem com o laravel
+  - Náo é necessario docker para rodar a aplicação
+
+### O que fiz de a mais:
+- Coloquei alguns regex para validaçao de e-mail dos usuários
+- Coloquei icones com cores para quando usuário passar com o mouse mudar de cor
+- Consegui deixar duas operações em uma pagina só (DELETE e GET) na home do projeto
+- Quase todos os componentes visuais estão com bootstrap, foram poucos os lugares que ultilizei css puro 
+
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
