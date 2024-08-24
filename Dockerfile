@@ -9,8 +9,9 @@ RUN apt-get update && apt-get install -y \
   zip \
   unzip \
   git \
+  nginx \
   && docker-php-ext-configure gd --with-freetype --with-jpeg \
-  && docker-php-ext-install gd pdo pdo_mysql pdo_sqlite
+  && docker-php-ext-install gd pdo pdo_sqlite
 
 COPY ./database /var/www/html/database
 
@@ -20,9 +21,13 @@ WORKDIR /var/www/html
 
 COPY composer.json .
 
-RUN composer install --no-scripts
+RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 COPY . .
 
-EXPOSE 9000
-CMD php artisan serve --host=0.0.0.0 --port=80
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["sh", "-c", "php-fpm & nginx -g 'daemon off;'"]
