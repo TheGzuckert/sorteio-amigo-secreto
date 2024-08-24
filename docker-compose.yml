@@ -23,7 +23,7 @@ services:
       - MAIL_FROM_ADDRESS=hello@example.com
       - MAIL_FROM_NAME=Laravel
     ports:
-      - "8002:80"
+      - "8001:8001"
     networks:
       - app-network
 
