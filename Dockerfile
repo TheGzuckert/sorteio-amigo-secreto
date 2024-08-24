@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
   zip \
   unzip \
   git \
+  nginx \
   && docker-php-ext-configure gd --with-freetype --with-jpeg \
   && docker-php-ext-install gd pdo pdo_sqlite
 
@@ -24,6 +25,9 @@ RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 COPY . .
 
+# Copiar configuração do Nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+
 EXPOSE 80
 
-CMD php artisan serve --host=0.0.0.0 --port=80
+CMD ["sh", "-c", "php-fpm & nginx -g 'daemon off;'"]
