@@ -25,8 +25,8 @@ RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 COPY . .
 
-# Copiar configuração do Nginx
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
