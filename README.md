@@ -4,7 +4,7 @@ Primeiramente muito obrigado se você esta chegou até aqui
 Esse projeto foi desenvolvido para o desafio do amigo secreto da empresa Log Smart
 
 ### Observações
-  - Acabei optando por ultilizar um banco sqlite pois assim ficaria mais simples ao clonar o projeto, e como estamos ultilizando docker, uni o útil ao agradável
+  - Acabei optando por utilizar um banco sqlite pois assim ficaria mais simples ao clonar o projeto, e como estamos utilizando docker, uni o útil ao agradável então mesmo que você não tenha o banco na sua máquina ele ira funcionar por conta do docker
 
 ### Requisitos:
 - PHP >= 8.0
