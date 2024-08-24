@@ -18,9 +18,11 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-COPY . .
+COPY composer.json .
 
 RUN composer install --no-scripts
 
+COPY . .
+
 EXPOSE 9000
-CMD ["php-fpm"]
+CMD php artisan serve --host=0.0.0.0 --port=80
