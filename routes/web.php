@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AmigosController;
+//use App\Http\Controllers\AmigosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,35 +16,18 @@ use App\Http\Controllers\AmigosController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/amigos');
 });
 
-//  Rotas principais da aplicação
-
-Route::get('/', [AmigosController::class, 'index']);
-
-Route::get('/amigos', [AmigosController::class, 'index']);
-
-//  Rota para criar um novo amigo
-Route::get('/criar', [AmigosController::class, 'create']);
-
-//  Rota para armazenar amigo/user
-Route::post('/amigos', [AmigosController::class, 'store']);
-
-//  Rota para deletar amigo/user
-Route::delete('/amigos/{id}', [AmigosController::class, 'destroy']);
-
-//  Rota para editar amigo/user
-Route::get('/amigos/{id}/edit', [AmigosController::class, 'edit']);
-
-//  Rota para atualizar amigo/user
-Route::put('/amigos/{id}', [AmigosController::class, 'update']);
-
-//  Rota para pegar informações especifias de um amigo/user <- Refatorar amanhã
-Route::get('/amigos/{id}/edit', [AmigosController::class, 'edit'])->name('amigos.edit');
-
-//  Rota para realizar sorterio dos alunos
-Route::get('/sorteio', [AmigosController::class, 'sorteio']);
-
-// Rota para buscar um amigo
-Route::get('/buscar-amigo', [AmigosController::class, 'buscarAmigo']);
+Route::controller(AmigosController::class)->group(function (){
+    Route::get('/', 'index');
+    Route::get('/amigos', 'index');
+    Route::get('/criar', 'create');
+    Route::post('/amigos', 'store');
+    Route::delete('/amigos/{id}', 'destroy');
+    Route::get('/amigos/{id}/edit', 'edit');
+    Route::put('/amigos/{id}', 'update');
+    Route::get('/amigos/{id}/edit', 'edit')->name('amigos.edit');
+    Route::get('/sorteio', 'sorteio');
+    Route::get('/buscar-amigo', 'buscarAmigo');
+});
